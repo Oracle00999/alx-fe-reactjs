@@ -1,4 +1,3 @@
-import { useState } from "react";
 import "./App.css";
 import WelcomeMessage from "./components/WelcomeMessage";
 import Header from "./components/Header";
@@ -10,7 +9,6 @@ function App() {
   return (
     <>
       <Header />
-
       <UserProfile name="Alice" age="25" bio="Loves hiking and photography" />
       <MainContent />
       <WelcomeMessage />
