@@ -21,6 +21,9 @@ const PostsComponent = () => {
     queryKey: ["posts"],
     queryFn: fetchPosts,
     staleTime: 60000, // Cache data for 1 minute
+    cacheTime: 60000, // Data stays in cache for 1 minute
+    refetchOnWindowFocus: true, // Refetch data when window gains focus
+    keepPreviousData: true, // Keep previous data while fetching new data
   });
 
   if (isLoading) {
