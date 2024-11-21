@@ -14,7 +14,7 @@ const PostsComponent = () => {
   const {
     data: posts,
     isLoading,
-    error,
+    isError,
     refetch,
   } = useQuery({
     queryKey: ["posts"],
@@ -26,8 +26,8 @@ const PostsComponent = () => {
     return <div>Loading posts...</div>;
   }
 
-  if (error) {
-    return <div>Error: {error.message}</div>;
+  if (isError) {
+    return <div>Error: {isError.message}</div>;
   }
 
   return (
