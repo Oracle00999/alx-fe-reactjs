@@ -13,6 +13,19 @@ const RegistrationForm = () => {
   const handleSubmit = (event) => {
     event.preventDefault(); // Prevent default form submission behavior
 
+    if (!username) {
+      setError("Username is required!");
+      return;
+    }
+    if (!email) {
+      setError("Email is required!");
+      return;
+    }
+    if (!password) {
+      setError("Password is required!");
+      return;
+    }
+
     // Basic validation
     if (!username || !email || !password) {
       setError("All fields are required.");
