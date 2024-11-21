@@ -13,6 +13,7 @@ const PostsComponent = () => {
   // useQuery hook to fetch posts
   const {
     data: posts,
+    error,
     isLoading,
     isError,
     refetch,
