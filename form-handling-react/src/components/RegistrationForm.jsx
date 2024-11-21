@@ -7,33 +7,33 @@ const RegistrationForm = () => {
   const [password, setPassword] = useState("");
 
   // State variable for error messages
-  const [error, setError] = useState("");
+  const [error, setErrors] = useState("");
 
   // Form submission handler
   const handleSubmit = (event) => {
     event.preventDefault(); // Prevent default form submission behavior
 
     if (!username) {
-      setError("Username is required!");
+      setErrors("Username is required!");
       return;
     }
     if (!email) {
-      setError("Email is required!");
+      setErrors("Email is required!");
       return;
     }
     if (!password) {
-      setError("Password is required!");
+      setErrors("Password is required!");
       return;
     }
 
     // Basic validation
     if (!username || !email || !password) {
-      setError("All fields are required.");
+      setErrors("All fields are required.");
       return;
     }
 
     // Clear the error if all fields are valid
-    setError("");
+    setErrors("");
 
     // Handle form data (e.g., send to an API)
     console.log("Form Submitted:", { username, email, password });
